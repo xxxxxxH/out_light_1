@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/st_category_light_setting">
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:icon="@drawable/ic_sound"
+            android:key="ENABLE_SOUND_KEY"
+            android:title="@string/st_enable_touch_sound"
+            android:widgetLayout="@layout/custom_checkbox" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:icon="@drawable/ic_light"
+            android:key="ENABLE_AUTOMATIC_LED_KEY"
+            android:summary="@string/st_automatic_turn_on_led_des"
+            android:title="@string/st_automatic_turn_on_led"
+            android:widgetLayout="@layout/custom_checkbox" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:icon="@drawable/ic_vibration"
+            android:key="VIBRATION_KEY"
+            android:summary="@string/st_vabration_sumary"
+            android:title="@string/st_vabration_title"
+            android:widgetLayout="@layout/custom_checkbox" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:icon="@drawable/ic_quit"
+            android:key="QUIT_KEY"
+            android:title="@string/st_ask_on_quit_title"
+            android:widgetLayout="@layout/custom_checkbox" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:icon="@drawable/ic_screen"
+            android:key="SCREEN_KEY"
+            android:summary="@string/st_keep_screen_on_sumary"
+            android:title="@string/st_keep_screen_on_title"
+            android:widgetLayout="@layout/custom_checkbox" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/st_category_performance">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:icon="@drawable/ic_power_saving_mode"
+            android:key="IN_SAVE_MODE_KEY"
+            android:summary="@string/st_about_app_power_saving_mode_description"
+            android:title="@string/st_about_app_power_saving_mode_title"
+            android:widgetLayout="@layout/custom_checkbox" />
+        <net.basicmodel.view.MyPreference
+            android:defaultValue="20"
+            android:dependency="IN_SAVE_MODE_KEY"
+            android:key="BATTERY_KEY"
+            android:title="@string/st_battery_level_title" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/st_category_about_name">
+        <Preference
+            android:icon="@drawable/ic_version"
+            android:key="APP_VERSION_KEY"
+            android:summary="2.0"
+            android:title="@string/st_about_app_version_title" />
+    </PreferenceCategory>
+</PreferenceScreen>
